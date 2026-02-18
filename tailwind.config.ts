@@ -12,6 +12,10 @@ export default {
         "2xl": "1400px",
       },
     },
+    fontFamily: {
+      display: ['Orbitron', 'sans-serif'],
+      body: ['Rajdhani', 'sans-serif'],
+    },
     extend: {
       colors: {
         border: "hsl(var(--border))",
