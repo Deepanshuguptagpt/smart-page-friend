@@ -1,4 +1,7 @@
 import { useEffect } from "react";
+import TopBar from "@/components/TopBar";
+import CollegeHeader from "@/components/CollegeHeader";
+import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 
@@ -36,24 +39,24 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background overflow-hidden relative">
-      {/* Scan line effect */}
-      <div className="pointer-events-none fixed inset-0 z-50 overflow-hidden opacity-[0.03]">
-        <div className="h-[2px] w-full bg-primary animate-[scan-line_8s_linear_infinite]" />
-      </div>
-
-      {/* Grid background */}
-      <div
-        className="pointer-events-none fixed inset-0 opacity-[0.04]"
-        style={{
-          backgroundImage: `linear-gradient(hsl(190 100% 50% / 0.3) 1px, transparent 1px),
-            linear-gradient(90deg, hsl(190 100% 50% / 0.3) 1px, transparent 1px)`,
-          backgroundSize: "60px 60px",
-        }}
-      />
-
+    <div className="min-h-screen bg-background">
+      <TopBar />
+      <CollegeHeader />
+      <Navbar />
       <HeroSection />
       <AboutSection />
+
+      {/* Footer */}
+      <footer className="bg-foreground text-background py-8 px-6">
+        <div className="max-w-6xl mx-auto text-center">
+          <p className="font-display text-lg font-bold mb-2">
+            Indore Institute of Science & Technology
+          </p>
+          <p className="font-body text-sm opacity-80">
+            © 2025 IIST. All Rights Reserved. | Approved by AICTE | Affiliated to RGPV Bhopal
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };

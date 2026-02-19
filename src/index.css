@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,47 +6,49 @@
 
 @layer base {
   :root {
-    --background: 220 20% 4%;
-    --foreground: 200 100% 90%;
+    --background: 0 0% 100%;
+    --foreground: 220 20% 15%;
 
-    --card: 220 20% 7%;
-    --card-foreground: 200 100% 90%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 15%;
 
-    --popover: 220 20% 7%;
-    --popover-foreground: 200 100% 90%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 15%;
 
-    --primary: 190 100% 50%;
-    --primary-foreground: 220 20% 4%;
+    --primary: 210 100% 40%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 20% 12%;
-    --secondary-foreground: 200 100% 85%;
+    --secondary: 145 60% 40%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 15% 15%;
-    --muted-foreground: 200 30% 55%;
+    --muted: 220 15% 95%;
+    --muted-foreground: 220 10% 45%;
 
-    --accent: 190 100% 50%;
-    --accent-foreground: 220 20% 4%;
+    --accent: 35 95% 55%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 190 60% 20%;
-    --input: 220 20% 15%;
-    --ring: 190 100% 50%;
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 210 100% 40%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    --sidebar-background: 220 20% 6%;
-    --sidebar-foreground: 200 100% 90%;
-    --sidebar-primary: 190 100% 50%;
-    --sidebar-primary-foreground: 220 20% 4%;
-    --sidebar-accent: 220 20% 12%;
-    --sidebar-accent-foreground: 200 100% 90%;
-    --sidebar-border: 190 60% 20%;
-    --sidebar-ring: 190 100% 50%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 220 20% 15%;
+    --sidebar-primary: 210 100% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 15% 95%;
+    --sidebar-accent-foreground: 220 20% 15%;
+    --sidebar-border: 220 15% 88%;
+    --sidebar-ring: 210 100% 40%;
 
-    --glow-primary: 0 0 20px hsl(190 100% 50% / 0.4);
-    --glow-strong: 0 0 40px hsl(190 100% 50% / 0.6);
+    --college-red: 0 80% 50%;
+    --college-green: 145 60% 35%;
+    --college-blue: 210 100% 40%;
+    --college-yellow: 45 100% 50%;
   }
 }
 
@@ -62,69 +64,46 @@
 
 /* n8n chat overrides */
 :root {
-  --chat--color-primary: hsl(190 100% 50%);
-  --chat--color-primary-shade-50: hsl(190 100% 40%);
-  --chat--color-primary-shade-100: hsl(190 100% 30%);
-  --chat--color-secondary: hsl(220 20% 7%);
-  --chat--color-secondary-shade-50: hsl(220 20% 12%);
-  --chat--color-white: hsl(200 100% 90%);
-  --chat--color-light: hsl(220 20% 15%);
-  --chat--color-light-shade-50: hsl(220 20% 20%);
-  --chat--color-medium: hsl(200 30% 55%);
-  --chat--color-dark: hsl(200 100% 90%);
-  --chat--color-disabled: hsl(220 15% 25%);
-  --chat--color-typing: hsl(200 30% 55%);
-  --chat--border-radius: 0.75rem;
+  --chat--color-primary: hsl(210 100% 40%);
+  --chat--color-primary-shade-50: hsl(210 100% 30%);
+  --chat--color-primary-shade-100: hsl(210 100% 25%);
+  --chat--color-secondary: hsl(0 0% 98%);
+  --chat--color-secondary-shade-50: hsl(220 15% 95%);
+  --chat--color-white: hsl(0 0% 100%);
+  --chat--color-light: hsl(220 15% 95%);
+  --chat--color-light-shade-50: hsl(220 15% 90%);
+  --chat--color-medium: hsl(220 10% 55%);
+  --chat--color-dark: hsl(220 20% 15%);
+  --chat--color-disabled: hsl(220 10% 75%);
+  --chat--color-typing: hsl(220 10% 55%);
+  --chat--border-radius: 0.5rem;
   --chat--transition-duration: 0.2s;
-  --chat--window--width: 420px;
-  --chat--window--height: 600px;
+  --chat--window--width: 400px;
+  --chat--window--height: 550px;
   --chat--header-height: auto;
   --chat--heading--font-size: 1.1em;
   --chat--subtitle--font-size: 0.85em;
   --chat--textarea--height: 50px;
   --chat--message--font-size: 0.9em;
   --chat--message--padding: 0.6em 0.8em;
-  --chat--message--bot--background: hsl(220 20% 12%);
-  --chat--message--user--background: hsl(190 100% 50% / 0.15);
-  --chat--message--bot--color: hsl(200 100% 90%);
-  --chat--message--user--color: hsl(200 100% 90%);
-  --chat--message--bot--border: 1px solid hsl(190 60% 20%);
-  --chat--message--user--border: 1px solid hsl(190 100% 50% / 0.3);
-  --chat--toggle--background: hsl(190 100% 50%);
-  --chat--toggle--hover--background: hsl(190 100% 40%);
-  --chat--toggle--active--background: hsl(190 100% 35%);
-  --chat--toggle--color: hsl(220 20% 4%);
+  --chat--message--bot--background: hsl(220 15% 95%);
+  --chat--message--user--background: hsl(210 100% 40% / 0.1);
+  --chat--message--bot--color: hsl(220 20% 15%);
+  --chat--message--user--color: hsl(220 20% 15%);
+  --chat--message--bot--border: 1px solid hsl(220 15% 88%);
+  --chat--message--user--border: 1px solid hsl(210 100% 40% / 0.3);
+  --chat--toggle--background: hsl(210 100% 40%);
+  --chat--toggle--hover--background: hsl(210 100% 30%);
+  --chat--toggle--active--background: hsl(210 100% 25%);
+  --chat--toggle--color: hsl(0 0% 100%);
 }
 
-@keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 15px hsl(190 100% 50% / 0.3); }
-  50% { box-shadow: 0 0 30px hsl(190 100% 50% / 0.6); }
+/* Marquee animation */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
-@keyframes scan-line {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(100vh); }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-.animate-pulse-glow {
-  animation: pulse-glow 3s ease-in-out infinite;
-}
-
-.animate-float {
-  animation: float 4s ease-in-out infinite;
-}
-
-.glow-text {
-  text-shadow: 0 0 10px hsl(190 100% 50% / 0.5), 0 0 30px hsl(190 100% 50% / 0.2);
-}
-
-.glass-panel {
-  background: hsl(220 20% 7% / 0.7);
-  backdrop-filter: blur(12px);
-  border: 1px solid hsl(190 60% 20% / 0.5);
+.animate-marquee {
+  animation: marquee 25s linear infinite;
 }
