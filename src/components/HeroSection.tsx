@@ -1,47 +1,55 @@
-import { CircuitBoard, Cpu, Zap } from "lucide-react";
+import { GraduationCap, Users, Award, BookOpen } from "lucide-react";
+
+const stats = [
+  { icon: GraduationCap, label: "B.Tech Programs", value: "10+" },
+  { icon: Users, label: "Students Placed", value: "5000+" },
+  { icon: Award, label: "NAAC Accredited", value: "A+" },
+  { icon: BookOpen, label: "Years of Excellence", value: "20+" },
+];
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-6">
-      <div className="relative z-10 text-center max-w-3xl mx-auto">
-        {/* Arc reactor icon */}
-        <div className="mx-auto mb-8 w-24 h-24 rounded-full border-2 border-primary/50 flex items-center justify-center animate-pulse-glow">
-          <div className="w-16 h-16 rounded-full border border-primary/30 flex items-center justify-center">
-            <Cpu className="w-8 h-8 text-primary" />
+    <section className="relative bg-gradient-to-br from-primary via-college-blue to-primary overflow-hidden">
+      {/* Overlay pattern */}
+      <div className="absolute inset-0 opacity-10" style={{
+        backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
+        backgroundSize: '40px 40px',
+      }} />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 md:py-28">
+        <div className="text-center">
+          <p className="font-display text-sm md:text-base tracking-widest text-primary-foreground/80 mb-4 uppercase">
+            Welcome to
+          </p>
+          <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-4 leading-tight">
+            Indore Institute of Science
+            <span className="block">& Technology</span>
+          </h1>
+          <p className="font-body text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto mb-10">
+            Amongst the Top Engineering Colleges of Indore — Approved by AICTE New Delhi, Affiliated to RGPV Bhopal
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            <button className="px-8 py-3 bg-accent text-accent-foreground font-display font-semibold rounded-md hover:opacity-90 transition-opacity shadow-lg">
+              Apply Now
+            </button>
+            <button className="px-8 py-3 bg-primary-foreground/10 border-2 border-primary-foreground text-primary-foreground font-display font-semibold rounded-md hover:bg-primary-foreground/20 transition-colors">
+              Explore Programs
+            </button>
           </div>
         </div>
 
-        <p className="font-display text-sm tracking-[0.4em] text-primary mb-4 uppercase">
-          System Online
-        </p>
-
-        <h1 className="font-display text-5xl md:text-7xl font-bold glow-text text-foreground mb-4">
-          DEEPANSHU
-          <span className="block text-primary">GUPTA</span>
-        </h1>
-
-        <p className="font-body text-lg md:text-xl text-muted-foreground max-w-xl mx-auto mb-10 leading-relaxed">
-          Welcome to my digital command center. I'm a builder, thinker, and creator
-          — and J.A.R.V.I.S. is here to assist you.
-        </p>
-
-        <div className="flex items-center justify-center gap-8 text-muted-foreground">
-          <div className="flex items-center gap-2 text-sm font-body">
-            <CircuitBoard className="w-4 h-4 text-primary" />
-            <span>AI Powered</span>
-          </div>
-          <div className="flex items-center gap-2 text-sm font-body">
-            <Zap className="w-4 h-4 text-primary" />
-            <span>Always Online</span>
-          </div>
+        {/* Stats bar */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+          {stats.map((stat) => (
+            <div key={stat.label} className="bg-primary-foreground/10 backdrop-blur-sm rounded-lg p-4 text-center border border-primary-foreground/20">
+              <stat.icon className="w-8 h-8 text-accent mx-auto mb-2" />
+              <p className="font-display text-2xl font-bold text-primary-foreground">{stat.value}</p>
+              <p className="font-body text-xs text-primary-foreground/80">{stat.label}</p>
+            </div>
+          ))}
         </div>
       </div>
-
-      {/* Decorative corner brackets */}
-      <div className="absolute top-8 left-8 w-16 h-16 border-l-2 border-t-2 border-primary/20" />
-      <div className="absolute top-8 right-8 w-16 h-16 border-r-2 border-t-2 border-primary/20" />
-      <div className="absolute bottom-8 left-8 w-16 h-16 border-l-2 border-b-2 border-primary/20" />
-      <div className="absolute bottom-8 right-8 w-16 h-16 border-r-2 border-b-2 border-primary/20" />
     </section>
   );
 };

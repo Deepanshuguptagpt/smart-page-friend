@@ -13,8 +13,8 @@ export default {
       },
     },
     fontFamily: {
-      display: ['Orbitron', 'sans-serif'],
-      body: ['Rajdhani', 'sans-serif'],
+      display: ['Poppins', 'sans-serif'],
+      body: ['Open Sans', 'sans-serif'],
     },
     extend: {
       colors: {
@@ -61,6 +61,10 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        "college-red": "hsl(var(--college-red))",
+        "college-green": "hsl(var(--college-green))",
+        "college-blue": "hsl(var(--college-blue))",
+        "college-yellow": "hsl(var(--college-yellow))",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -69,20 +73,12 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
       },
       animation: {
