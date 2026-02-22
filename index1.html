@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NeuraNextAI — AI Automation for Every Business</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main>
+    <h1 class="tkm">NeuraNextAI</h1>
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-form card">
+          <h2>Request a demo</h2>
+          <p>Tell us about your use case — we'll propose an automation plan.</p>
+          <form id="demoForm" novalidate>
+            <label>Full name
+              <input type="text" name="name" id="name" required>
+            </label>
+            <label>Company email
+              <input type="email" name="email" id="email" required>
+            </label>
+            <label>Company
+              <input type="text" name="company" id="company">
+            </label>
+            <label>Message
+              <textarea name="message" id="message" rows="4"></textarea>
+            </label>
+
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">Send request</button>
+              <button class="btn btn-ghost" type="reset">Reset</button>
+            </div>
+            <p class="form-note">By submitting, you agree to be contacted about your request.</p>
+          </form>
+        </div>
+
+        <div class="contact-info">
+          <h3>Contact</h3>
+          <p>Sales & Partnerships</p>
+          <p><a href="mailto:sales@neuranext.ai">sales@neuranext.ai</a></p>
+          <p>Phone: +91 90000 00000</p>
+
+          <h4>Office</h4>
+          <p>Indore, India</p>
+
+          <div class="social">
+            <a href="#">LinkedIn</a>
+            <a href="#">Twitter</a>
+            <a href="#">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="foot-grid">
+        <div>© <span id="year"></span> NeuraNextAI — All rights reserved.</div>
+        <div class="foot-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+<script type="module">
+	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+	createChat({
+	webhookUrl: 'https://nfifnienf.app.n8n.cloud/webhook/d2cb3372-6adb-4644-b0d5-b6c6e3c3d641/chat',
+	webhookConfig: {
+		method: 'POST',
+		headers: {}
+	},
+	target: '#n8n-chat',
+	mode: 'window',
+	chatInputKey: 'chatInput',
+	chatSessionKey: 'sessionId',
+	loadPreviousSession: true,
+	metadata: {},
+	showWelcomeScreen: false,
+	defaultLanguage: 'en',
+	initialMessages: [
+		'Hi there! 👋',
+		'My name is Tarun. How can I assist you today?'
+	],
+	i18n: {
+		en: {
+			title: 'Hi there! 👋',
+			subtitle: "Start a chat. We're here to help you 24/7.",
+			footer: '',
+			getStarted: 'New Conversation',
+			inputPlaceholder: 'Type your question..',
+		},
+	},
+	enableStreaming: false,
+});;
+</script>
+
+</body>
+</html>
